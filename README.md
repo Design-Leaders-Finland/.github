@@ -17,19 +17,19 @@ We make small, focused apps that respect your privacy. No tracking. No ads. Each
 
 ### color-surface
 
-![color-surface screenshot](https://github.com/Design-Leaders-Finland/color-surface/raw/main/docs/screenshot.png)
+![color-surface screenshot](https://github.com/Design-Leaders-Finland/.github/raw/main/profile/screenshots/color-surface.png)
 
 ### naoentendonada
 
-![naoentendonada screenshot](https://github.com/Design-Leaders-Finland/naoentendonada/raw/main/docs/screenshot.png)
+![naoentendonada screenshot](https://github.com/Design-Leaders-Finland/.github/raw/main/profile/screenshots/naoentendonada.png)
 
 ### wall
 
-![wall screenshot](https://github.com/Design-Leaders-Finland/wall/raw/main/docs/screenshot.png)
+![wall screenshot](https://github.com/Design-Leaders-Finland/.github/raw/main/profile/screenshots/wall.png)
 
 ### ok-timelapse
 
-![ok-timelapse screenshot](https://github.com/Design-Leaders-Finland/ok-timelapse/raw/main/docs/screenshot.png)
+![ok-timelapse screenshot](https://github.com/Design-Leaders-Finland/.github/raw/main/profile/screenshots/ok-timelapse.png)
 
 ## Our Principles
 
