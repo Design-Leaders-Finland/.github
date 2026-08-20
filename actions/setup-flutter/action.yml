@@ -1,0 +1,28 @@
+name: Setup Flutter SDK
+description: Clones and caches a pinned Flutter SDK version without any unpinned third-party actions
+inputs:
+  version:
+    description: Flutter SDK version, must match a tag in flutter/flutter (e.g. 3.44.2)
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Cache Flutter SDK # also caches the engine artifacts flutter downloads on first run
+      id: cache-flutter
+      uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      with:
+        path: ${{ runner.temp }}/flutter
+        key: flutter-sdk-${{ runner.os }}-${{ inputs.version }}
+
+    - name: Clone Flutter SDK
+      if: steps.cache-flutter.outputs.cache-hit != 'true'
+      shell: bash
+      run: git clone --branch ${{ inputs.version }} --depth 1 https://github.com/flutter/flutter.git "${{ runner.temp }}/flutter"
+
+    - name: Add Flutter to PATH
+      shell: bash
+      run: echo "${{ runner.temp }}/flutter/bin" >> "$GITHUB_PATH"
+
+    - name: Disable Flutter analytics # also bootstraps the SDK (downloads Dart/engine) on first run
+      shell: bash
+      run: flutter config --no-analytics
